@@ -23,22 +23,22 @@
       "BOT_TOKEN": {
          "description": "Your bot token. Get one from @BotFather duh",
          "required": true,
-         "value": ""
+         "value": "5628206377:AAHF4K0qU9bGv1DZLHhaOYcFkzJE5-GO448"
       },
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "18791409"
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "389c73d03dc1e98d973a125065d67b3d"
       },    
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "2088106582"
+         "value": "5163444566"
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
@@ -51,24 +51,24 @@
       },
       "BOT_USERNAME": {
          "description": "Username of your bot without the @",
-         "value": "micchon_shikimori_bot",
+         "value": "SuguhaRobot",
          "required": true
       },
 
       "BOT_ID": {
          "description": "to get your bot_id using other bot or userbot",
-         "value": "5169508699",
+         "value": "5628206377",
          "required": true
       },
 
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "SOME1HING"
+         "value": "Damatte"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "tyranteyeeee"
+         "value": "TogaSupport"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
