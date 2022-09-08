@@ -165,7 +165,7 @@
       "REDIS_URL": {
          "description": "Paste your redis url in format redis://<username of admin role>:<password of admin role>@<endoint url>/<database name>",
          "required": true,
-         "value": "redis://SOME1HING:some1hing123@redis-11054.c9.us-east-1-4.ec2.cloud.redislabs.com:11054/shikimori-db"
+         "value": "redis://PervertSenpai:Hritvik1+@redis-10950.c265.us-east-1-2.ec2.cloud.redislabs.com:10950/Kac-free-db"
       },  
       "ANIME_NAME": {
          "description": "If your bot is based on some anime, type the name of anime. Otherwise, manually edit PM_START_TEXT in main.py",
