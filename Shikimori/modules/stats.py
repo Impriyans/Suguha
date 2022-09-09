@@ -73,29 +73,29 @@ def stats(update, context):
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
     botuptime = get_readable_time((time.time() - StartTime))
     status = "*╒═══「 System statistics 」*\n\n"
-    status += "*➢ System Start time:* " + str(uptime) + "\n"
+    status += "*≛ System Start time:* " + str(uptime) + "\n"
     uname = platform.uname()
-    status += "*➢ System:* " + str(uname.system) + "\n"
-    status += "*➢ Node name:* " + escape_markdown(str(uname.node)) + "\n"
-    status += "*➢ Release:* " + escape_markdown(str(uname.release)) + "\n"
-    status += "*➢ Machine:* " + escape_markdown(str(uname.machine)) + "\n"
+    status += "*≛ System:* " + str(uname.system) + "\n"
+    status += "*≛ Node name:* " + escape_markdown(str(uname.node)) + "\n"
+    status += "*≛ Release:* " + escape_markdown(str(uname.release)) + "\n"
+    status += "*≛ Machine:* " + escape_markdown(str(uname.machine)) + "\n"
     mem = virtual_memory()
     cpu = cpu_percent()
     disk = disk_usage("/")
-    status += "*➢ CPU:* " + str(cpu) + " %\n"
-    status += "*➢ RAM:* " + str(mem[2]) + " %\n"
-    status += "*➢ Storage:* " + str(disk[3]) + " %\n\n"
-    status += "*➢ Python Version:* " + python_version() + "\n"
-    status += "*➢ Python-Telegram-Bot:* " + str(ptbver) + "\n"
-    status += "*➢ Telethon Version:* " + str(tlhver) + "\n"
-    status += "*➢ Pyrogram Version:* " + str(pyrover) + "\n"
-    status += "*➢ Uptime:* " + str(botuptime) + "\n"
+    status += "*≛ CPU:* " + str(cpu) + " %\n"
+    status += "*≛ RAM:* " + str(mem[2]) + " %\n"
+    status += "*≛ Storage:* " + str(disk[3]) + " %\n\n"
+    status += "*≛ Python Version:* " + python_version() + "\n"
+    status += "*≛ Python-Telegram-Bot:* " + str(ptbver) + "\n"
+    status += "*≛ Telethon Version:* " + str(tlhver) + "\n"
+    status += "*≛ Pyrogram Version:* " + str(pyrover) + "\n"
+    status += "*≛ Uptime:* " + str(botuptime) + "\n"
     try:
         if STATS_IMG:
             update.effective_message.reply_photo(
                 STATS_IMG,
                 status
-                + "\n𝕭𝖔𝖙 𝖘𝖙𝖆𝖙𝖎𝖘𝖙𝖎𝖈𝖘:\n"
+                + "\n𝔖𝔲𝔤𝔲𝔥𝔞 𝔖𝔱𝔞𝔱𝔦𝔰𝔱𝔦𝔠𝔰:\n"
                 + "\n".join([mod.__stats__() for mod in STATS]),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
@@ -103,7 +103,7 @@ def stats(update, context):
                         [                  
                             InlineKeyboardButton(
                                     text="REPO",
-                                    url="https://github.com/SOME-1HING/ShikimoriBot"),
+                                    url="https://github.com/Pervert-Senpai/Suguha"),
                         ]
                     ]
                 ),
@@ -111,7 +111,7 @@ def stats(update, context):
         else:
             update.effective_message.reply_text(
                 status
-                + "\n𝕭𝖔𝖙 𝖘𝖙𝖆𝖙𝖎𝖘𝖙𝖎𝖈𝖘:\n"
+                + "\n𝔖𝔲𝔤𝔲𝔥𝔞 𝔖𝔱𝔞𝔱𝔦𝔰𝔱𝔦𝔠𝔰:\n"
                 + "\n".join([mod.__stats__() for mod in STATS]),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
@@ -119,7 +119,7 @@ def stats(update, context):
                         [                  
                             InlineKeyboardButton(
                                     text="REPO",
-                                    url="https://github.com/SOME-1HING/ShikimoriBot"),
+                                    url="https://github.com/Pervert-Senpai/Suguha"),
                         ]
                     ]
                 ),
@@ -142,7 +142,7 @@ def stats(update, context):
                   [                  
                        InlineKeyboardButton(
                                 text="REPO",
-                                url="https://github.com/SOME-1HING/ShikimoriBot"),
+                                url="https://github.com/Pervert-Senpai/Suguha"),
                      ] 
                 ]
             ),
