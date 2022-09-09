@@ -72,7 +72,7 @@ def get_readable_time(seconds: int) -> str:
 def stats(update, context):
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
     botuptime = get_readable_time((time.time() - StartTime))
-    status = "*╒═══「 System statistics 」*\n\n"
+    status = "*╒═══「 Leafa statistics 」*\n\n"
     status += "*≛ System Start time:* " + str(uptime) + "\n"
     uname = platform.uname()
     status += "*≛ System:* " + str(uname.system) + "\n"
@@ -102,8 +102,8 @@ def stats(update, context):
                     [
                         [                  
                             InlineKeyboardButton(
-                                    text="REPO",
-                                    url="https://github.com/Pervert-Senpai/Suguha"),
+                                    text="OWNER",
+                                    url="https://t.me/Damatte"),
                         ]
                     ]
                 ),
@@ -118,8 +118,8 @@ def stats(update, context):
                     [
                         [                  
                             InlineKeyboardButton(
-                                    text="REPO",
-                                    url="https://github.com/Pervert-Senpai/Suguha"),
+                                    text="OWNER",
+                                    url="https://t.me/Damatte"),
                         ]
                     ]
                 ),
@@ -141,8 +141,8 @@ def stats(update, context):
                 [
                   [                  
                        InlineKeyboardButton(
-                                text="REPO",
-                                url="https://github.com/Pervert-Senpai/Suguha"),
+                                text="OWNER",
+                                url="https://t.me/Damatte"),
                      ] 
                 ]
             ),
