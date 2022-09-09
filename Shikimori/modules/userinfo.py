@@ -143,7 +143,7 @@ def hpmanager(user):
 
 def make_bar(per):
     done = min(round(per / 10), 10)
-    return "❤" * done + "♡" * (10 - done)
+    return "🍬" * done + "𒆜" * (10 - done)
 
 
 def get_id(update: Update, context: CallbackContext):
@@ -276,21 +276,21 @@ def info(update: Update, context: CallbackContext):
     rep = message.reply_text("<code>Appraising...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"╒═══「<b>• Appraisal results •</b> 」\n"
-        f"• ID: <code>{user.id}</code>\n"
-        f"• First Name: {html.escape(user.first_name)}"
+        f"╒═══「<b>• Leafa's Data •</b> 」\n"
+        f"⍣ ID: <code>{user.id}</code>\n"
+        f"⍣ First Name: {html.escape(user.first_name)}"
     )
 
     if user.last_name:
         text += f"\n• Last Name: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n• Username: @{html.escape(user.username)}"
+        text += f"\n⍣ Username: @{html.escape(user.username)}"
 
-    text += f"\n• Userlink: {mention_html(user.id, 'link')}"
+    text += f"\n⍣ Userlink: {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n• Presence: <code>{}</code>"
+        _stext = "\n⍣ Presence: <code>{}</code>"
 
         afk_st = is_user_afk(user.id)
         if afk_st:
@@ -311,21 +311,21 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThis person is my 'Owner'."
+        text += "\n\nThis person is my '𝐁𝐨𝐲𝐟𝐫𝐢𝐞𝐧𝐝'."
     elif user.id in DEV_USERS:
-        text += "\n\nThis person is my 'Best Friend'."
+        text += "\n\nThis person is my '𝐁𝐞𝐬𝐭 𝐅𝐫𝐢𝐞𝐧𝐝'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThis person is my 'Friend'."
+        text += "\n\nThis person is my '𝐅𝐫𝐢𝐞𝐧𝐝'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThis person is my 'Servant'."
+        text += "\n\nThis person is my '𝐎𝐧𝐢𝐢'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThis person is just a 'Peasant'."
+        text += "\n\nThis person is just a '𝐊𝐧𝐨𝐰𝐧'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThis person is just a 'Slave'."
+        text += "\n\nThis person is just a '𝐓𝐆 𝐔𝐬𝐞𝐫'."
         disaster_level_present = True
 
 
