@@ -243,11 +243,11 @@ def info(update: Update, context: CallbackContext):
     buttons = [
     [
                         InlineKeyboardButton(
-                             text="Health",
-                             url="https://t.me/Shikimori_bot_Updates/9"),
+                             text="Candy 🍬",
+                             url="https://t.me/SuguhaPowers"),
                        InlineKeyboardButton(
-                             text="Disasters",
-                             url="https://t.me/Shikimori_bot_Updates/6"),
+                             text="Powers 🛸",
+                             url="https://t.me/SuguhaPowers"),
                     ],
     ]
     user_id = extract_user(update.effective_message, args)
@@ -273,7 +273,7 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>Appraising...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>Aah ! Aah ! Aah !...</code>", parse_mode=ParseMode.HTML)
 
     text = (
         f"╒═══「<b>• Leafa's Data •</b> 」\n"
@@ -282,7 +282,7 @@ def info(update: Update, context: CallbackContext):
     )
 
     if user.last_name:
-        text += f"\n• Last Name: {html.escape(user.last_name)}"
+        text += f"\n⍣ Last Name: {html.escape(user.last_name)}"
 
     if user.username:
         text += f"\n⍣ Username: @{html.escape(user.username)}"
