@@ -129,7 +129,7 @@ def start(update: Update, context: CallbackContext):
         chat_id = update.effective_chat.id
         first_name = update.effective_user.first_name
         chat_name = dispatcher.bot.getChat(chat_id).title
-        start_text= "*ʜᴇʏᴀᴀ ! {}, ɪ'ᴍ ᴀʟɪᴠᴇ ᴀᴛ {} since :* `{}`\n".format(escape_markdown(first_name), escape_markdown(chat_name), uptime)
+        start_text= "*⚝ Hᴇʏᴀᴀ ! {}, ɪ'ᴍ ᴀʟɪᴠᴇ ᴀᴛ {} ꜱɪɴᴄᴇ :* `{}`\n".format(escape_markdown(first_name), escape_markdown(chat_name), uptime)
         try:
             if start_id in ("jpeg", "jpg", "png"):
                 update.effective_message.reply_photo(
