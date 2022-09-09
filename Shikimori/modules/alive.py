@@ -56,10 +56,10 @@ def awake(update: Update, context: CallbackContext):
 ♡ Ɱу BσуƑʀιᴇɴd : <a href="https://t.me/{OWNER_USERNAME}">{OWNER_USERNAME}</a></b>
     """
     if NETWORK:
-        TEXT = TEXT + f'\n⚪ <b>I am Powered by : <a href="https://t.me/{NETWORK_USERNAME}">{NETWORK}</a>\n\n' + 'Thanks For Adding Me Here ❤️</b>'
+        TEXT = TEXT + f'\n⚪ <b>I am Powered by : <a href="https://t.me/{NETWORK_USERNAME}">{NETWORK}</a>\n\n' + 'Thanks For Adding Me Here 💗</b>'
     
     else:
-        TEXT = TEXT + "\n<b>⚝ᴛʜᴀɴᴋꜱ ꜰᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ʜᴇʀᴇ 📍</b>"
+        TEXT = TEXT + "\n<b>⚝ ᴛʜᴀɴᴋꜱ ꜰᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ʜᴇʀᴇ 📍</b>"
 
     try:
         if alive_id in ("jpeg", "jpg", "png"):
@@ -81,7 +81,7 @@ __handlers__ = [
     ALIVE_HANDLER,
 ]
 
-__mod_name__ = "Alive ✨"
+__mod_name__ = "Alive 👀"
 __help__ = """
 *ALIVE*
  ❍ `/alive` :Check BOT status
