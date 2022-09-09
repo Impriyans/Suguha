@@ -103,12 +103,12 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         return ""
 
     if user_id in DEMONS:
-        rt += "Requested HA to promote a Servant to Friend."
+        rt += "Requested HA to promote a Onii to Friend."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote a Slave to Friend."
+        rt += "Requested HA to promote a Known to Friend."
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -161,16 +161,16 @@ def addsupport(
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "Requested HA to demote this Friend to Servant"
+        rt += "Requested HA to demote this Friend to Onii"
         data["sudos"].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        message.reply_text("This user is already a Servant.")
+        message.reply_text("This user is already a Onii.")
         return ""
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote this Slave to Servant"
+        rt += "Requested HA to promote this Known to Onii"
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -181,7 +181,7 @@ def addsupport(
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\n{user_member.first_name} is promoted to Servant!"
+        rt + f"\n{user_member.first_name} is promoted to Onii!"
     )
 
     log_message = (
@@ -217,17 +217,17 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Friend, Demoting to Slave."
+        rt += "This member is a Friend, Demoting to Known."
         data["sudos"].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is Servant, Demoting to Slave."
+        rt += "This user is Onii, Demoting to Known."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        message.reply_text("This user is already a Slave.")
+        message.reply_text("This user is already a Known.")
         return ""
 
     data["whitelists"].append(user_id)
@@ -237,7 +237,7 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\nSuccessfully promoted {user_member.first_name} to a Slave!"
+        rt + f"\nSuccessfully promoted {user_member.first_name} to a Known!"
     )
 
     log_message = (
@@ -273,22 +273,22 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Friend, Demoting to Peasant."
+        rt += "This member is a Friend, Demoting to TG USER."
         data["sudos"].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is a Servant, Demoting to Peasant."
+        rt += "This user is a Onii, Demoting to TG USER."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "This user is a Slave, promoting to Peasant."
+        rt += "This user is a Known, promoting to TG USER."
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
     if user_id in TIGERS:
-        message.reply_text("This user is already a Peasant.")
+        message.reply_text("This user is already a TG USER.")
         return ""
 
     data["tigers"].append(user_id)
@@ -298,7 +298,7 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\nSuccessfully promoted {user_member.first_name} to a Peasant!"
+        rt + f"\nSuccessfully promoted {user_member.first_name} to a TG USER!"
     )
 
     log_message = (
@@ -333,7 +333,7 @@ def removesudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("Requested HA to demote this user to Civilian")
+        message.reply_text("Requested HA to demote this user to Newbie")
         DRAGONS.remove(user_id)
         data["sudos"].remove(user_id)
 
@@ -376,7 +376,7 @@ def removesupport(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DEMONS:
-        message.reply_text("Requested HA to demote this user to Civilian")
+        message.reply_text("Requested HA to demote this user to Newbie")
         DEMONS.remove(user_id)
         data["supports"].remove(user_id)
 
@@ -395,7 +395,7 @@ def removesupport(update: Update, context: CallbackContext) -> str:
         return log_message
 
     else:
-        message.reply_text("This user is not a Servant!")
+        message.reply_text("This user is not a Onii!")
         return ""
 
 
@@ -419,7 +419,7 @@ def removewhitelist(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in WOLVES:
-        message.reply_text("Demoting to normal user")
+        message.reply_text("Demoting to normie")
         WOLVES.remove(user_id)
         data["whitelists"].remove(user_id)
 
@@ -437,7 +437,7 @@ def removewhitelist(update: Update, context: CallbackContext) -> str:
 
         return log_message
     else:
-        message.reply_text("This user is not a Slave!")
+        message.reply_text("This user is not a Known!")
         return ""
 
 
@@ -461,7 +461,7 @@ def removetiger(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in TIGERS:
-        message.reply_text("Demoting to normal user")
+        message.reply_text("Demoting to normie")
         TIGERS.remove(user_id)
         data["tigers"].remove(user_id)
 
@@ -479,14 +479,14 @@ def removetiger(update: Update, context: CallbackContext) -> str:
 
         return log_message
     else:
-        message.reply_text("This user is not a Peasant!")
+        message.reply_text("This user is not a TG USER!")
         return ""
 
 
 
 @whitelist_plus
 def whitelistlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Slaves:</b>\n"
+    reply = "<b>Knowns:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
@@ -505,7 +505,7 @@ def whitelistlist(update: Update, context: CallbackContext):
 
 @whitelist_plus
 def tigerlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Peasants:</b>\n"
+    reply = "<b>Known SPTGUSERS:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
@@ -527,7 +527,7 @@ def supportlist(update: Update, context: CallbackContext):
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
-    reply = "<b>Known Servants:</b>\n"
+    reply = "<b>Known Oniis:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -565,7 +565,7 @@ def devlist(update: Update, context: CallbackContext):
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>Best Friends:</b>\n"
+    reply = "<b>BestFriends:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:
@@ -675,17 +675,17 @@ Visit @{SUPPORT_CHAT} for more information.
 """
 
 SUDO_HANDLER = CommandHandler(("addfriend", "addsudo", "adddragon"), addsudo, run_async=True)
-SUPPORT_HANDLER = CommandHandler(("addsupport", "addservant", "adddemon"), addsupport, run_async=True)
-TIGER_HANDLER = CommandHandler(("addpeasant", "addtiger"), addtiger, run_async=True)
-WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addslave", "addwolf"), addwhitelist, run_async=True)
+SUPPORT_HANDLER = CommandHandler(("addsupport", "addonii", "adddemon"), addsupport, run_async=True)
+TIGER_HANDLER = CommandHandler(("addtguser", "addtiger"), addtiger, run_async=True)
+WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addknown", "addwolf"), addwhitelist, run_async=True)
 UNSUDO_HANDLER = CommandHandler(("removesudo", "removefriend", "removedragon"), removesudo, run_async=True)
-UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removeservant", "removedemon"), removesupport, run_async=True)
-UNTIGER_HANDLER = CommandHandler(("removepeasant", "removetiger"), removetiger, run_async=True)
-UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removeslave", "removewolf"), removewhitelist, run_async=True)
+UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removeonii", "removedemon"), removesupport, run_async=True)
+UNTIGER_HANDLER = CommandHandler(("removesptguser", "removetiger"), removetiger, run_async=True)
+UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removeknown", "removewolf"), removewhitelist, run_async=True)
 
-WHITELISTLIST_HANDLER = CommandHandler(["slavelist", "slaves", "wolves", "wolflist"], whitelistlist, run_async=True)
-TIGERLIST_HANDLER = CommandHandler(["peasantlist", "peasants", "tigers", "tigerlist"], tigerlist, run_async=True)
-SUPPORTLIST_HANDLER = CommandHandler(["servantlist", "servants", "demons", "demonlist"], supportlist, run_async=True)
+WHITELISTLIST_HANDLER = CommandHandler(["knownlist", "knowns", "wolves", "wolflist"], whitelistlist, run_async=True)
+TIGERLIST_HANDLER = CommandHandler(["sptguserlist", "sptgusers", "tigers", "tigerlist"], tigerlist, run_async=True)
+SUPPORTLIST_HANDLER = CommandHandler(["oniilist", "oniis", "demons", "demonlist"], supportlist, run_async=True)
 SUDOLIST_HANDLER = CommandHandler(["friendlist", "friends", "sudos", "dragons", "sudolist", "dragonlist"], sudolist, run_async=True)
 DEVLIST_HANDLER = CommandHandler(["devlist", "bestfriends", "devs"], devlist, run_async=True)
 
