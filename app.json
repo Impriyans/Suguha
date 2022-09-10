@@ -28,17 +28,17 @@
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": "18791409"
+         "value": ""
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": "389c73d03dc1e98d973a125065d67b3d"
+         "value": ""
       },    
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "5163444566"
+         "value": ""
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
@@ -73,7 +73,7 @@
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
          "required": true,
-         "value": "mongodb+srv://SOME1HING:some1hing123@some1hing-db.hfyyfjfh.mongodb.net/?retryWrites=true&w=majorityPYTHONPATH=/app"
+         "value": "mongodb+srv://priyanshuray00:impriyans22032006@cluster0.eqdskg6.mongodb.net/?retryWrites=true&w=majority"
       },
       "LOG_CHANNEL": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
@@ -97,12 +97,12 @@
       },
       "DATABASE_URL": {
         "description": "Put sql based database link. Recommended to use Elephant SQL.",
-        "value": "postgres://dsnjbjab:saifhsudfasfihaif@sdsfs.db.elephantsql.com/dsnjbjab",
+        "value": "",
         "required": true
       },
       "FUNC_DB_URL": {
          "description": "Put sql based database link. Recommended to use Elephant SQL. MUST BE DIFFERENT THAN DATABSE_URL",
-         "value": "postgres://dsnjbjab:saifhsudfasfihaif@sdsfs.db.elephantsql.com/dsnjbjab",
+         "value": "",
          "required": true
        },
       "DEV_USERS": {
@@ -165,7 +165,7 @@
       "REDIS_URL": {
          "description": "Paste your redis url in format redis://<username of admin role>:<password of admin role>@<endoint url>/<database name>",
          "required": true,
-         "value": "redis://PervertSenpai:Hritvik1+@redis-10950.c265.us-east-1-2.ec2.cloud.redislabs.com:10950/Kac-free-db"
+         "value": ""
       },  
       "ANIME_NAME": {
          "description": "If your bot is based on some anime, type the name of anime. Otherwise, manually edit PM_START_TEXT in main.py",
